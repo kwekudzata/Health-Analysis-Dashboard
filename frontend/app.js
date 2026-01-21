@@ -2,7 +2,7 @@
 // Constants
 // ============================================
 // CHANGE THIS URL in production to your live backend URL (e.g., https://my-backend.onrender.com)
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "https://health-analysis-dashboard.onrender.com";
 
 // ============================================
 // Chart 1: Age Distribution by Gender
