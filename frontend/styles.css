@@ -1,0 +1,138 @@
+/* =========================================
+   Design System & Variables
+   ========================================= */
+:root {
+    /* Color Palette - Clean & Professional */
+    --bg-body: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-header: #ffffff;
+
+    --text-primary: #1a1a1a;
+    --text-secondary: #64748b;
+    --text-accent: #0f172a;
+
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+    /* Typography */
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    /* Spacing */
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 3rem;
+
+    /* Radius */
+    --radius-md: 12px;
+}
+
+/* =========================================
+   Reset & Base Styles
+   ========================================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    color: var(--text-accent);
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: var(--text-secondary);
+}
+
+/* =========================================
+   Layout & Container
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-xl) var(--space-md);
+}
+
+.header {
+    margin-bottom: var(--space-xl);
+    text-align: left;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.header p {
+    font-size: 1.125rem;
+    max-width: 600px;
+}
+
+/* =========================================
+   Dashboard Grid
+   ========================================= */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================
+   Cards
+   ========================================= */
+.card {
+    background-color: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 24px;
+    color: var(--text-accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-full-width {
+    grid-column: 1 / -1;
+}
+
+/* =========================================
+   Utilities & Error States
+   ========================================= */
+.error-message {
+    color: #ef4444;
+    font-weight: 500;
+    text-align: center;
+    padding: 24px;
+}
